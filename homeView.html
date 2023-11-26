@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo/ori-and-co-logo-white.svg" />
+    <title>Ori anc co</title>
+  </head>
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="#"
+            ><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt=""
+          /></a>
+          <div class="header-links">
+            <a href="homeView.html" class="header-link">Accueil</a>
+            <a href="#" class="header-link">A propos</a>
+            <a href="searchView.html" class="header-link">Notre catalogue</a>
+            <a href="#" class="header-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-searchbar">
+            <input type="text" id="searchbar" placeholder="Rechercher..." />
+            <img class="searchbar-icon" src="img/icons/icon-search.svg" />
+          </div>
+          <div class="header-icon">
+            <a href="cartView.html"><img class="bag" src="img/icons/icon-bag.svg" alt="" /></a>
+            <a href="#" class="user-link"
+              ><img class="user" src="img/icons/icon-user.svg" alt=""
+            /></a>
+
+            <div class="hamburger-menu">
+              <input id="menu_toggle" type="checkbox" />
+              <label class="menu_btn" for="menu_toggle">
+                <span></span>
+              </label>
+
+              <ul class="menu_box">
+                <li><a class="menu_item" href="homeView.html">Accueil</a></li>
+                <li><a class="menu_item" href="#">À propos</a></li>
+                <li><a class="menu_item" href="#">Notre catalogue</a></li>
+                <li><a class="menu_item" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------- HERO ---------------------->
+    <div class="hero">
+      <div class="hero-content">
+        <h1 class="hero-content_title">Créez votre univers</h1>
+        <p class="hero-content_text">
+          Décorez votre habitation avec nos plantes et fleurs et suivez tous nos conseils pour les
+          garder en bonne santé !
+        </p>
+        <a href="searchView.html" class="hero-content_button btn">
+          Découvrir nos plantes<img src="img/icons/icon-arrow-right.svg" alt=""
+        /></a>
+      </div>
+      <div class="hero-image">
+        <img src="img/plants/monstera.png" alt="" class="hero-image_principal" />
+        <img src="img/hero-image-2.png" alt="" class="hero-image_top" />
+        <img src="img/hero-image-3.png" alt="" class="hero-image_bottom" />
+        <img src="img/hero-ellipse.png" alt="" class="hero-image_background" />
+      </div>
+    </div>
+
+    <!---------------------- SELECTION ---------------------->
+    <div class="selection">
+      <h2 class="selection_title">Notre sélection</h2>
+      <p class="selection_subtitle subtitle">Decouvrez nos favoris du moment !</p>
+
+      <div class="selection-container">
+        <div class="selection-content">
+          <div class="selection-bigcard">
+            <img src="img/icons/icon-heart.svg" alt="" class="selection-bigcard_icon" />
+            <img src="img/plants/lys.png" alt="" class="selection-bigcard_img" />
+            <div class="selection-infos">
+              <p class="selection-infos_title">Lys</p>
+              <p class="selection-infos_text">Elle est très lisse</p>
+              <div class="selection-infos_note">
+                <div class="note-icon">
+                  <img src="img/icons/icon-star-fill.svg" class="star" />
+                  <img src="img/icons/icon-star-fill.svg" class="star" />
+                  <img src="img/icons/icon-star-fill.svg" class="star" />
+                  <img src="img/icons/icon-star-fill.svg" class="star" />
+                  <img src="img/icons/icon-star-empty.svg" class="star" />
+                </div>
+                <p class="note-text">(50)</p>
+              </div>
+              <p class="selection-infos_price">20,99€</p>
+            </div>
+          </div>
+
+          <div id="selection-right"></div>
+        </div>
+      </div>
+      <a href="searchView.html" class="selection_button btn">
+        Voir notre sélection<img src="img/icons/icon-arrow-right.svg" alt=""
+      /></a>
+    </div>
+
+    <!---------------------- CATEGORY ---------------------->
+    <div class="category">
+      <h2 class="category-title">Catégories</h2>
+      <p class="category-subtitle subtitle">Trouvez la plante de vos reves</p>
+
+      <div class="category-content">
+        <div class="category-content_plant">
+          <a href="#">
+            <img class="plant-photo" src="img/category-1.png" alt="" />
+            <div class="plant-text">
+              <p class="cat-text">Plantes d'interieur</p>
+              <img class="arrow-icon" src="img/icons/icon-arrow-right-black.svg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="category-content_plant">
+          <a href="#">
+            <img class="plant-photo" src="img/category-2.png" alt="" />
+            <div class="plant-text">
+              <p class="cat-text">Bouquets de fleurs</p>
+              <img class="arrow-icon" src="img/icons/icon-arrow-right-black.svg" alt="" />
+            </div>
+          </a>
+        </div>
+
+        <div class="category-content_plant">
+          <a href="#">
+            <img class="plant-photo" src="img/category-3.png" alt="" />
+            <div class="plant-text">
+              <p class="cat-text">Plantes d'exterieur</p>
+              <img class="arrow-icon" src="img/icons/icon-arrow-right-black.svg" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- CONTACT ---------------------->
+    <div class="contact">
+      <h2 class="contact-title">Nous trouver</h2>
+      <p class="contact-subtitle subtitle">Venez découvrir les plantes dans notre magasins !</p>
+      <div class="contact-content">
+        <iframe
+          class="frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5394192708136!2d-1.6223847246759115!3d47.2451544128687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ed1e8fd78e53%3A0x19488219713f7157!2s4%20Chem.%20de%20la%20Chatterie%2C%2044800%20Saint-Herblain!5e0!3m2!1sfr!2sfr!4v1699860043428!5m2!1sfr!2sfr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="contact-content_informations">
+          <div class="informations-group">
+            <p class="informations-group_title">Notre adresse</p>
+            <p class="informations-group_text">4 chemin de la Chatterie</p>
+            <p class="informations-group_text">44800, Saint-Herblain</p>
+            <p class="informations-group_text">France</p>
+          </div>
+          <div class="informations-group">
+            <p class="informations-group_title">Du lundi au vendredi</p>
+            <p class="informations-group_text">De 9h30 à 19h30</p>
+          </div>
+          <div class="informations-group">
+            <p class="informations-group_title">Le samedi</p>
+            <p class="informations-group_text">De 8h30 à 19h30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------- INFORMATIONS ---------------------->
+    <div class="informations">
+      <div class="informations-content">
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-credit-card.svg" alt="" />
+          <p class="group-text">Paiement sécurisé en 3 ou 4 fois</p>
+        </div>
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-wallet.svg" alt="" />
+          <p class="group-text">Livraison offerte à partir de 40€ d'achat</p>
+        </div>
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-box.svg" alt="" />
+          <p class="group-text">Satisfait ou remboursé</p>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- NEWSLETTER ---------------------->
+    <div class="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
+        <p class="newsletter-container_subtitle">
+          Venez découvrir les plantes dans notre magasins !
+        </p>
+        <div class="newsletter-container_mail">
+          <label>Votre email</label>
+          <div class="input_group">
+            <input type="email" placeholder="Entrez votre email" class="input" />
+            <button class="newsletter-btn btn">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- FOOTER ---------------------->
+
+    <div class="footer">
+      <div class="footer-content">
+        <img src="img/logo/ori-and-co-logo.svg" alt="Logo Ori and co" />
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Plan du site</h3>
+          <a href="#" class="sitemap-link">Accueil</a>
+          <a href="#" class="sitemap-link">À propos</a>
+          <a href="searchView.html" class="sitemap-link">Notre catalogue</a>
+          <a href="#" class="sitemap-link">Contact</a>
+        </div>
+        <div class="footer-content_contact">
+          <h3 class="contact-title">Contact</h3>
+          <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
+          <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
+          <p class="contact-bold">Adresse</p>
+          <p class="contact-address contact-space">
+            4 chemin de la Chatterie 44800, Saint-Herblain France
+          </p>
+        </div>
+        <div class="footer-content_socials">
+          <h3 class="socials-title">Suivez nous</h3>
+          <div class="socials-content">
+            <a
+              ><img
+                src="img/icons/icon-instagram.svg"
+                alt="Icone Instagram"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-facebook..svg"
+                alt="Icone Facebook"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-pinterest.svg"
+                alt="Icone Pinterest"
+                class="socials-content_link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legals">
+        <a href="#" class="footer-legals_link">Mentions Légales</a>
+        <img src="img/icons/icon-dot.svg" class="footer-legals_dot" />
+        <a href="#" class="footer-legals_link">Politique de confidentialité</a>
+      </div>
+    </div>
+
+    <script src="./js/home.js" type="text/javascript"></script>
+  </body>
+</html>
