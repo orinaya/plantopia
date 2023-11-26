@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/ori-and-co-logo-white.svg" />
+    <title>Ori anc co</title>
+  </head>
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="header">
+      <div class="header-left">
+        <a href="#"><img class="header-logo" src="img/ori-and-co-logo-white.svg" alt="" /></a>
+        <div class="header-links">
+          <a href="home.html" class="header-link">Accueil</a>
+          <a href="#" class="header-link">A propos</a>
+          <a href="search.html" class="header-link">Notre catalogue</a>
+          <a href="#" class="header-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="header-searchbar">
+          <input type="text" id="searchbar" placeholder="Rechercher..." />
+        </div>
+        <div class="header-icon">
+          <a href="cart.html"><img class="bag" src="img/icon-bag.svg" alt="" /></a>
+          <a href="#" class="user-link"><img class="user" src="img/icon-user.svg" alt="" /></a>
+          <img class="menu" src="img/icon-menu.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------- BREADCRUMB ---------------------->
+    <div class="breadcrumb">
+      <a href="home.html" class="breadcrumb_previous">Accueil</a>
+      <p class="breadcrumb_separator">/</p>
+      <p class="breadcrumb_current">Résultats pour 'Plantes'</p>
+    </div>
+
+    <!---------------------- TITLE ---------------------->
+    <h1 class="h1-title">Résultats pour 'Plantes'</h1>
+
+    <div>
+      <select id="selector">
+        <option value="default">Veuillez choisir un filtre</option>
+        <option value="nom_asc">Nom ASC</option>
+        <option value="nom_desc">Nom DESC</option>
+        <option value="prix_asc">Prix ASC</option>
+        <option value="prix_desc">Prix DESC</option>
+      </select>
+    </div>
+
+    <!---------------------- LIST ---------------------->
+    <a href="product.html" id="list-plants"></a>
+    <button class="list-button btn">Voir plus<img src="img/icon-plus.svg" alt="" /></button>
+
+    <!---------------------- NEWSLETTER ---------------------->
+    <div class="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
+        <p class="newsletter-container_subtitle">
+          Venez découvrir les plantes dans notre magasins !
+        </p>
+        <div class="newsletter-container_mail">
+          <label>Votre email</label>
+          <div class="input_group">
+            <input type="email" placeholder="Entrez votre email" class="input" />
+            <button class="newsletter-btn btn">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- FOOTER ---------------------->
+
+    <div class="footer">
+      <div class="footer-content">
+        <img src="img/ori-and-co-logo.svg" alt="Logo Ori and co" />
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Plan du site</h3>
+          <a href="#" class="sitemap-link">Accueil</a>
+          <a href="#" class="sitemap-link">À propos</a>
+          <a href="search.html" class="sitemap-link">Notre catalogue</a>
+          <a href="#" class="sitemap-link">Contact</a>
+        </div>
+        <div class="footer-content_contact">
+          <h3 class="contact-title">Contact</h3>
+          <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
+          <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
+          <p class="contact-bold">Adresse</p>
+          <p class="contact-address contact-space">
+            4 chemin de la Chatterie 44800, Saint-Herblain France
+          </p>
+        </div>
+        <div class="footer-content_socials">
+          <h3 class="socials-title">Suivez nous</h3>
+          <div class="socials-content">
+            <a
+              ><img src="img/icon-instagram.svg" alt="Icone Instagram" class="socials-content_link"
+            /></a>
+            <a
+              ><img src="img/icon-facebook..svg" alt="Icone Facebook" class="socials-content_link"
+            /></a>
+            <a
+              ><img src="img/icon-pinterest.svg" alt="Icone Pinterest" class="socials-content_link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legals">
+        <a href="#" class="footer-legals_link">Mentions Légales</a>
+        <img src="img/dot.svg" class="footer-legals_dot" />
+        <a href="#" class="footer-legals_link">Politique de confidentialité</a>
+      </div>
+    </div>
+
+    <script src="./js/search-card.js" type="text/javascript"></script>
+  </body>
+</html>
