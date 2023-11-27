@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./theme/style.css" />
+    <link rel="icon" href="img/logo/ori-and-co-logo-white.svg" />
+    <title>Ori anc co | Panier</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="#"><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt="" /></a>
+          <div class="header-links">
+            <a href="index.html" class="header-link">Accueil</a>
+            <a href="#" class="header-link">A propos</a>
+            <a href="search.html" class="header-link">Notre catalogue</a>
+            <a href="#" class="header-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-searchbar">
+            <input type="text" id="searchbar" placeholder="Rechercher..." />
+            <img class="searchbar-icon" src="img/icons/icon-search.svg" />
+          </div>
+          <div class="header-icon">
+            <a href="cart.html"><img class="bag" src="img/icons/icon-bag-2.svg" alt="" /></a>
+            <a href="#" class="user-link"><img class="user" src="img/icons/icon-user.svg" alt="" /></a>
+
+            <div class="hamburger-menu">
+              <input id="menu_toggle" type="checkbox" />
+              <label class="menu_btn" for="menu_toggle">
+                <span></span>
+              </label>
+
+              <ul class="menu_box">
+                <li><a class="menu_item" href="index.html">Accueil</a></li>
+                <li><a class="menu_item" href="#">À propos</a></li>
+                <li><a class="menu_item" href="#">Notre catalogue</a></li>
+                <li><a class="menu_item" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!---------------------- BREADCRUMB ---------------------->
+    <div class="breadcrumb">
+      <a href="index.html" class="breadcrumb_previous">Accueil</a>
+      <p class="breadcrumb_separator">/</p>
+      <p class="breadcrumb_current">Panier</p>
+    </div>
+
+    <!---------------------- TITLE ---------------------->
+    <h1 class="h1-title">Mon panier</h1>
+
+    <!-- CART-LEFT -->
+    <div id="cart">
+      <div class="cart-left">
+        <div class="cart-product_top">
+          <img src="img/logo/ori-and-co-logo-2.svg" />
+          <p class="top-text">2 articles</p>
+        </div>
+        <div class="cart-product_bottom">
+          <img class="bottom-img" src="img/plants/lys.png" />
+          <div class="bottom-informations">
+            <div class="bottom-informations_top">
+              <h2 class="title">Lys</h2>
+              <p class="price">12,99€</p>
+              <p>(12,99€ x 1)</p>
+            </div>
+            <div class="bottom-informations_bottom">
+              <div>
+                <p>Quantité</p>
+                <div class="counter">
+                  <button class="counter_button-before">-</button>
+                  <p class="counter_text">1</p>
+                  <button class="counter_button-after">+</button>
+                </div>
+              </div>
+              <img src="img/icons/icon-trash.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="cart-product_bottom">
+          <img class="bottom-img" src="img/plants/tulipe-1.png" />
+          <div class="bottom-informations">
+            <div class="bottom-informations_top">
+              <h2 class="title">Tulipe</h2>
+              <p class="price">20,99€</p>
+              <p>(20,99€x 1)</p>
+            </div>
+            <div class="bottom-informations_bottom">
+              <div>
+                <p>Quantité</p>
+                <div class="counter">
+                  <button class="counter_button-before">-</button>
+                  <p class="counter_text">1</p>
+                  <button class="counter_button-after">+</button>
+                </div>
+              </div>
+              <img src="img/icons/icon-trash.svg" />
+            </div>
+          </div>
+        </div>
+
+        <a href="search.html" class="btn secondary cart-product_button"
+          ><img class="test" src="img/icons/icon-arrow-left.svg" />Continuer mon shopping
+        </a>
+      </div>
+
+      <div class="cart-summary">
+        <h3 class="cart-summary_title">Récapitulatif du panier</h3>
+        <div class="cart-summary_group">
+          <div class="group-text">
+            <h4>Sous-total</h4>
+            <h4>33,98€</h4>
+          </div>
+          <p class="simple-text">(avant promotions)</p>
+        </div>
+        <div class="cart-summary_group">
+          <div class="group-text">
+            <h4>Promotions</h4>
+          </div>
+          <p class="simple-text">Dont avantage fidélité</p>
+        </div>
+        <div class="cart-summary_group">
+          <div class="group-text">
+            <h4>Ajouter un code promo</h4>
+            <button class="btn secondary">
+              <img class="icon-plus" src="img//icons/icon-plus-black.svg" alt="icone plus" />
+            </button>
+          </div>
+        </div>
+        <div class="cart-summary_group">
+          <div class="group-text">
+            <h4>Total</h4>
+            <h4 class="bold-summary">33,98€</h4>
+          </div>
+        </div>
+
+        <a href="#" class="btn primary cart-summary_button">Aller au paiement</a>
+
+        <div class="cart-summary_payment">
+          <img src="img/icons/icon-paypal.svg" alt="" />
+          <img src="img/icons/icon-mastercard.svg" alt="" />
+          <img src="img/icons/icon-visa.svg" alt="" />
+          <img src="img/icons/icon-cb.svg" alt="" />
+          <img src="img/icons/icon-google-pay.svg" alt="" />
+          <img src="img/icons/icon-apple-pay.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- INFORMATIONS ---------------------->
+    <section class="informations">
+      <div class="informations-content">
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-credit-card.svg" alt="icone carte de crédit" />
+          <p class="group-text">Paiement sécurisé en 3 ou 4 fois</p>
+        </div>
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-wallet.svg" alt="icon porte feuille" />
+          <p class="group-text">Livraison offerte à partir de 40€ d'achat</p>
+        </div>
+        <div class="informations-content_group">
+          <img class="group-icon" src="img/icons/icon-box.svg" alt="icone carton" />
+          <p class="group-text">Satisfait ou remboursé</p>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------- NEWSLETTER ---------------------->
+    <section class="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
+        <p class="newsletter-container_subtitle">Venez découvrir les plantes dans notre magasins !</p>
+        <div class="newsletter-container_mail">
+          <label>Votre email</label>
+          <div class="input_group">
+            <input type="email" placeholder="Entrez votre email" class="input" />
+            <button class="newsletter-btn btn">Valider</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------- FOOTER ---------------------->
+
+    <div class="footer">
+      <div class="footer-content">
+        <img src="img/logo/ori-and-co-logo.svg" alt="Logo Ori and co" />
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Plan du site</h3>
+          <a href="#" class="sitemap-link">Accueil</a>
+          <a href="#" class="sitemap-link">À propos</a>
+          <a href="search.html" class="sitemap-link">Notre catalogue</a>
+          <a href="#" class="sitemap-link">Contact</a>
+        </div>
+        <div class="footer-content_contact">
+          <h3 class="contact-title">Contact</h3>
+          <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
+          <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
+          <p class="contact-bold">Adresse</p>
+          <p class="contact-address contact-space">4 chemin de la Chatterie 44800, Saint-Herblain France</p>
+        </div>
+        <div class="footer-content_socials">
+          <h3 class="socials-title">Suivez nous</h3>
+          <div class="socials-content">
+            <a
+              ><img src="img/icons/icon-instagram.svg" alt="Icone Instagram" class="socials-content_link"
+            /></a>
+            <a
+              ><img src="img/icons/icon-facebook..svg" alt="Icone Facebook" class="socials-content_link"
+            /></a>
+            <a
+              ><img src="img/icons/icon-pinterest.svg" alt="Icone Pinterest" class="socials-content_link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legals">
+        <a href="#" class="footer-legals_link">Mentions Légales</a>
+        <img src="img/icons/icon-dot.svg" class="footer-legals_dot" />
+        <a href="#" class="footer-legals_link">Politique de confidentialité</a>
+      </div>
+    </div>
+  </body>
+</html>

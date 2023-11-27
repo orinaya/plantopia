@@ -1,39 +1,39 @@
 var plantsData = [
   {
     id: 1,
-    name: "Mon cactus",
-    description: "Il vous apportera du piquant dans votre vie",
-    image: "img/plants/cactus-1.png",
-    note: 4,
-    review: 3,
-    price: "10,99€",
+    name: "Médinilla",
+    description: "Médine est là",
+    image: "img/plants/medinilla.png",
+    alt: "Medinilla roses en pot",
+    review: 4,
+    price: "40,99€",
   },
   {
-    id: 8,
+    id: 2,
     name: "Tulipe fever",
     description: "Toute le monde s'enflamme pour les bulbes de tulipes",
     image: "img/plants/tulipe-1.png",
-    note: 4,
+    alt: "Tulipes roses vase",
     review: 50,
     price: "20,99€",
   },
   {
-    id: 5,
-    name: "Médinilla",
-    description: "Elle est jolie",
-    image: "img/plants/medinilla.png",
-    note: 12,
-    review: 1,
-    price: "60,99€",
+    id: 3,
+    name: "Gladiolus",
+    description: "Ave Cesar",
+    image: "img/plants/gladiolus.png",
+    alt: "Gladiolus roses et blanches vase",
+    review: 12,
+    price: "12,99€",
   },
   {
-    id: 2,
-    name: "Ma succulente",
-    description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/succulente-1.png",
-    note: 4,
-    review: 0,
-    price: "12,99€",
+    id: 4,
+    name: "Cactus",
+    description: "Le cac tue pas",
+    image: "img/plants/cactus-1.png",
+    alt: "Cactus fleuri rose",
+    review: 3,
+    price: "10,99€",
   },
 ];
 var plantsHome = document.getElementById("selection-right");
@@ -43,8 +43,8 @@ for (var k = 0; k < plantsData.length; k++) {
   var newHomeCard = document.createElement("div");
   newHomeCard.classList.add("selection-shortcard");
   newHomeCard.innerHTML = `
-  <img src="img/icon-heart-line.svg" alt="" class="selection-shortcard_icon" />
-  <img src="${plantsData[k].image}" alt="" class="selection-shortcard_img" />
+  <img src="img/icons/icon-heart-line.svg" alt="icone coeur ligne" class="selection-shortcard_icon" />
+  <img src="${plantsData[k].image}" alt="${plantsData[k].alt}" class="selection-shortcard_img" />
   <div class="shortcard-infos">
     <p class="shortcard-infos_title">${plantsData[k].name}</p>
     <p class="shortcard-infos_text">${plantsData[k].description}</p>

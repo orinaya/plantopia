@@ -1,163 +1,140 @@
 var plantsData = [
   {
     id: 1,
-    name: "Mon cactus",
-    description: "Il vous apportera du piquant dans votre vie",
-    image: "img/plants/cactus-1.png",
-    note: 4,
-    review: 3,
-    price: "10,99€",
-  },
-  {
-    id: 5,
-    name: "Médinilla",
-    description: "Elle est jolie",
-    image: "img/plants/medinilla.png",
-    note: 12,
-    review: 1,
-    price: "60,99€",
-  },
-  {
-    id: 2,
-    name: "Ma succulente",
-    description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/succulente-1.png",
-    note: 4,
-    review: 0,
-    price: "12,99€",
-  },
-  {
-    id: 10,
-    name: "Lys",
+    name: "Lys blanche",
     description: "Elle est très lisse",
     image: "img/plants/lys.png",
-    note: 4,
-    review: 0,
+    alt: "Lys blanche vase",
+    review: 45,
     price: "12,99€",
+    category: "Fleur",
   },
   {
     id: 2,
-    name: "Succulente n°1",
-    description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/succulente-3.png",
-    note: 4,
-    review: 50,
-    price: "20,99€",
-  },
-  {
-    id: 1,
-    name: "Mon petit pot",
-    description: "Offrez ce super pot à un super pote",
-    image: "img/plants/pot.png",
-    note: 4,
-    review: 3,
-    price: "10,99€",
+    name: "Médinilla",
+    description: "Médine est là",
+    image: "img/plants/medinilla.png",
+    alt: "Medinilla roses en pot",
+    review: 4,
+    price: "40,99€",
+    category: "Fleur",
   },
   {
     id: 3,
-    name: "Ma super monstera",
-    description: "Elle ne fait pas peur",
-    image: "img/plants/monstera.png",
-    note: 4,
-    review: 10,
-    price: "50,98€",
+    name: "Tulipe",
+    description: "Toute le monde s'enflamme pour les bulbes de tulipes",
+    image: "img/plants/tulipe-1.png",
+    alt: "Tulipes roses vase",
+    review: 50,
+    price: "20,99€",
+    category: "Fleur",
   },
   {
     id: 4,
-    name: "Yucca",
-    description: "Achetez moi par pitié",
-    image: "img/plants/yucca.png",
-    note: 4,
-    review: 2,
-    price: "30,98€",
+    name: "Gladiolus",
+    description: "Ave Cesar",
+    image: "img/plants/gladiolus.png",
+    alt: "Gladiolus roses et blanches vase",
+    review: 12,
+    price: "12,99€",
+    category: "Fleur",
+  },
+  {
+    id: 5,
+    name: "Cactus",
+    description: "Le cac tue pas",
+    image: "img/plants/cactus-1.png",
+    alt: "Cactus Fleuri rose",
+    review: 3,
+    price: "10,99€",
+    category: "Succulente",
   },
   {
     id: 6,
-    name: "Ma succulente 2",
+    name: "Succulente",
     description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/succulente-2.png",
-    note: 4,
-    review: 50,
+    image: "img/plants/succulente-1.png",
+    alt: "Succulente en pot",
+    review: 6,
+    price: "12,99€",
+    category: "Succulente",
+  },
+  {
+    id: 7,
+    name: "Orchidée",
+    description: "Elle a une idée derrière la tête",
+    image: "img/plants/orchidee.png",
+    alt: "Orchidée blanche en pot",
+    review: "24",
     price: "20,99€",
+    category: "Fleur",
   },
   {
     id: 8,
-    name: "Tulipe",
-    description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/tulipe-1.png",
-    note: 4,
-    review: 50,
-    price: "20,99€",
+    name: "Roses",
+    description: "Elles ne sont pas roses",
+    image: "img/plants/rose-1.png",
+    alt: "Roses blanches vase",
+    review: 3,
+    price: "10,99€",
+    category: "Fleur",
   },
   {
     id: 9,
-    name: "À changer",
-    description: "Offrez ce super pot à un super pote",
-    image: "img/plants/pot.png",
-    note: 4,
-    review: 3,
-    price: "10,99€",
-  },
-  {
-    id: 11,
-    name: "Ma super monstera",
-    description: "Elle ne fait pas peur",
+    name: "Monstera",
+    description: "Elle n'est pas très effrayante",
     image: "img/plants/monstera.png",
-    note: 4,
+    alt: "Monstera en pot",
     review: 10,
     price: "50,98€",
+    category: "Plantes d'intérieur",
   },
   {
-    id: 12,
+    id: 10,
     name: "Yucca",
     description: "Achetez moi par pitié",
     image: "img/plants/yucca.png",
-    note: 4,
+    alt: "Yucca en pot",
     review: 2,
     price: "30,98€",
-  },
-
-  {
-    id: 13,
-    name: "Bambou",
-    description: "Prenez un grand bout",
-    image: "img/plants/plant-1.png",
-    note: 12,
-    review: 1,
-    price: "60,99€",
+    category: "Plantes d'intérieur",
   },
   {
-    id: 14,
+    id: 11,
     name: "Ma succulente 2",
     description: "Cette plante est succulente mais elle ne se mange pas",
     image: "img/plants/succulente-2.png",
-    note: 4,
+    alt: "Succulente en pot",
     review: 50,
     price: "20,99€",
+    category: "Succulente",
   },
+
   {
-    id: 15,
+    id: 12,
     name: "Ma succulente 3",
     description: "Cette plante est succulente mais elle ne se mange pas",
     image: "img/plants/succulente-3.png",
-    note: 4,
-    review: 50,
-    price: "20,99€",
+    alt: "Succulente en pot",
+    review: 3,
+    price: "10,99€",
+    category: "Succulente",
   },
   {
-    id: 16,
+    id: 13,
     name: "Ma succulente 4",
     description: "Cette plante est succulente mais elle ne se mange pas",
-    image: "img/plants/succulente-2.png",
-    note: 4,
-    review: 50,
-    price: "20,99€",
+    image: "img/plants/succulente-4.png",
+    alt: "Succulente en pot",
+    review: 10,
+    price: "50,98€",
+    category: "Succulente",
   },
 ];
 
 var plantsList = document.getElementById("list-plants");
 var searchbar = document.getElementById("searchbar");
-var selector = document.getElementById("selector");
+var selector = document.getElementById("sort");
 
 searchbar.addEventListener("keyup", function () {
   var dataFiltered = plantsData.filter((data) =>
@@ -179,6 +156,18 @@ function compareStrings(a, b) {
   return a.name.localeCompare(b.name);
 }
 
+function filterByCategory() {
+  var selectedCategory = document.getElementById("categoryFilter").value;
+
+  if (selectedCategory === "all") {
+    createListPlants(plantsData);
+  } else {
+    var filteredByCategory = plantsData.filter((plant) => plant.category === selectedCategory);
+    plantsList.innerHTML = "";
+    createListPlants(filteredByCategory);
+  }
+}
+
 selector.addEventListener("change", function () {
   var sorteredList = plantsData;
 
@@ -187,15 +176,12 @@ selector.addEventListener("change", function () {
       sorteredList = plantsData.sort(compareStrings);
       break;
     case "nom_desc":
-      //Decroissant par nom
       sorteredList = plantsData.sort(compareStrings).reverse();
       break;
     case "prix_asc":
-      //Croissant par prix
       sorteredList = plantsData.sort(compareNumbers);
       break;
     case "prix_desc":
-      //Deroissant par prix
       sorteredList = plantsData.sort(compareNumbers).reverse();
       break;
   }
@@ -203,18 +189,29 @@ selector.addEventListener("change", function () {
   createListPlants(sorteredList);
 });
 
-// var newDiv;
+function toggleHeartIcon(icon) {
+  var currentSrc = icon.src;
+
+  if (currentSrc.includes("icon-heart-line")) {
+    icon.src = currentSrc.replace("icon-heart-line", "icon-heart-fill");
+  } else if (currentSrc.includes("icon-heart-fill")) {
+    icon.src = currentSrc.replace("icon-heart-fill", "icon-heart-line");
+  }
+}
 
 function createListPlants(list) {
+  document.getElementById("resultNumber").textContent = list.length;
   for (var j = 0; j < list.length; j++) {
     newCard = document.createElement("div");
     newCard.classList.add("search-content");
     newCard.innerHTML = `
-    <img src="img/icons/icon-heart-line.svg" alt="" class="search-content_icon" />
-    <img src="${plantsData[j].image}" alt="" class="search-content_img" />
+   
+    <img src="img/icons/icon-heart-line.svg" alt="icone coeur ligne" class="search-content_icon" onclick="toggleHeartIcon(this)"/>
+    <a class="search-link" href="product.html" >
+    <img src="${list[j].image}" alt="${list[j].alt}" class="search-content_img" />
     <div class="search-content_infos">
-      <p class="infos-title">${plantsData[j].name}</p>
-      <p class="infos-text">${plantsData[j].description}</p>
+      <p class="infos-title">${list[j].name}</p>
+      <p class="infos-text">${list[j].description}</p>
       <div class="infos-note">
         <div class="infos-note_icon">
           <img src="img/icons/icon-star-fill.svg" class="star" />
@@ -223,11 +220,11 @@ function createListPlants(list) {
           <img src="img/icons/icon-star-fill.svg" class="star" />
           <img src="img/icons/icon-star-empty.svg" class="star" />
         </div>
-        <p class="infos-note_text">(${plantsData[j].review})</p>
+        <p class="infos-note_text">(${list[j].review})</p>
       </div>
-      <p class="infos-price">${plantsData[j].price}</p>
+      <p class="infos-price">${list[j].price}</p>
       <button class="btn infos-button">Ajouter au panier</button>
-    </div>
+    </div></a> 
                   `;
     plantsList.appendChild(newCard);
   }

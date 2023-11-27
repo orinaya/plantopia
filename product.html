@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./theme/style.css" />
+    <link rel="icon" href="img/logo/ori-and-co-logo-white.svg" />
+    <title>Ori anc co</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="#"
+            ><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt=""
+          /></a>
+          <div class="header-links">
+            <a href="index.html" class="header-link">Accueil</a>
+            <a href="#" class="header-link">A propos</a>
+            <a href="search.html" class="header-link">Notre catalogue</a>
+            <a href="#" class="header-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-searchbar">
+            <input type="text" id="searchbar" placeholder="Rechercher..." />
+            <img class="searchbar-icon" src="img/icons/icon-search.svg" />
+          </div>
+          <div class="header-icon">
+            <a href="cart.html"><img class="bag" src="img/icons/icon-bag-2.svg" alt="" /></a>
+            <a href="#" class="user-link"
+              ><img class="user" src="img/icons/icon-user.svg" alt=""
+            /></a>
+
+            <div class="hamburger-menu">
+              <input id="menu_toggle" type="checkbox" />
+              <label class="menu_btn" for="menu_toggle">
+                <span></span>
+              </label>
+
+              <ul class="menu_box">
+                <li><a class="menu_item" href="index.html">Accueil</a></li>
+                <li><a class="menu_item" href="#">À propos</a></li>
+                <li><a class="menu_item" href="#">Notre catalogue</a></li>
+                <li><a class="menu_item" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!---------------------- BREADCRUMB ---------------------->
+    <div class="breadcrumb">
+      <a href="index.html" class="breadcrumb_previous">Accueil</a>
+      <p class="breadcrumb_separator">/</p>
+      <a href="search.html" class="breadcrumb_previous">Résultats pour 'Plantes'</a>
+      <p class="breadcrumb_separator">/</p>
+      <p class="breadcrumb_current">Ma super plantes</p>
+    </div>
+
+    <!---------------------- PRODUCT ---------------------->
+    <div id="product">
+      <div class="product-left">
+        <img class="product-left_img" src="img/plants/lys.png" />
+      </div>
+
+      <div class="product-content">
+        <div class="product-content_title">
+          <h1 class="h1-title" id="title">Lys blanche</h1>
+          <div class="informations-product">
+            <a href="#description" class="informations-product_description">Description</a>
+            <p class="informations-product_separator">|</p>
+            <div class="informations-product_stars">
+              <img src="img/icons/icon-star-fill.svg" class="star" />
+              <img src="img/icons/icon-star-fill.svg" class="star" />
+              <img src="img/icons/icon-star-fill.svg" class="star" />
+              <img src="img/icons/icon-star-fill.svg" class="star" />
+              <img src="img/icons/icon-star-empty.svg" class="star" />
+            </div>
+            <a href="#reviews" class="informations-product_reviews">(50 avis)</a>
+          </div>
+        </div>
+        <div class="product-content_price">
+          <p class="price">59,98€</p>
+          <p class="delivery">Livraison gratuite</p>
+          <div class="counter">
+            <button class="counter_button-before">-</button>
+            <p class="counter_text">1</p>
+            <button class="counter_button-after">+</button>
+          </div>
+        </div>
+
+        <div class="product-content_shop">
+          <div class="buttons">
+            <button class="buttons_cart btn">Ajouter au panier</button>
+            <button class="buttons_favorites btn ghost">
+              <p class="text">Ajouter aux favoris</p>
+              <img src="img/icons/icon-heart-line.svg" class="icon" />
+            </button>
+          </div>
+          <div class="delivery">
+            <div class="delivery-content">
+              <div class="delivery-content_left">
+                <img src="img/icons/icon-delivery.svg" class="left-icon" />
+                <div class="left-text">
+                  <p class="text-top">Retrait en magasin</p>
+                  <p class="text-bottom">En stock</p>
+                </div>
+              </div>
+
+              <p class="left-date">À partir du 12/10</p>
+            </div>
+            <div class="delivery-content">
+              <div class="delivery-content_left">
+                <img src="img/icons/icon-home.svg" class="left-icon" />
+                <div class="left-text">
+                  <p class="text-top">Livraison</p>
+                  <p class="text-bottom">En stock</p>
+                </div>
+              </div>
+
+              <p class="delivery-content_date">Livré à partir du 18/10</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- DESCRIPTION ---------------------->
+    <div id="description">
+      <h2 class="description-title">Description du produit</h2>
+      <div class="description-content">
+        <div class="description-content_item" id="plantation">
+          <h3 class="item-title">Plantation</h3>
+          <h4 class="item-subtitle">Plantation</h4>
+          <p class="item-text">De Novembre à Mars</p>
+          <h4 class="item-subtitle">Apport conseillé à la plantation</h4>
+          <p class="item-text">Amendement organique</p>
+        </div>
+        <div class="description-content_item" id="care">
+          <h3 class="item-title">Entretien</h3>
+          <h4 class="item-subtitle">Arrosage</h4>
+          <p class="item-text">Arrosage copieux à la plantation</p>
+          <h4 class="item-subtitle">Nutrition</h4>
+          <p class="item-text">
+            Apport d'un engrais complet tous les ans au départ de la végétation
+          </p>
+          <h4 class="item-subtitle">Commentaires sur période de taille</h4>
+          <p class="item-text">Pas de taille</p>
+          <h4 class="item-subtitle">Resistance au froid</h4>
+          <p class="item-text">-15 à -20 °C</p>
+          <h4 class="item-subtitle">Resistance aux maladies</h4>
+          <p class="item-text">Oui</p>
+        </div>
+        <div class="description-content_item" id="conditioning">
+          <h3 class="item-title">Conditionnement</h3>
+          <h4 class="item-subtitle">Conditionnement</h4>
+          <p class="item-text">Pot / terre</p>
+          <h4 class="item-subtitle">Apports conseillés à la plantation</h4>
+          <p class="item-text">Contenance (Litres): 10</p>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- PRODUCT OPINIONS ---------------------->
+    <div id="reviews">
+      <h2 class="reviews-title">Avis sur le produit</h2>
+      <div class="reviews-stars">
+        <img src="img/icons/icon-star-fill.svg" alt="" />
+        <img src="img/icons/icon-star-fill.svg" alt="" />
+        <img src="img/icons/icon-star-fill.svg" alt="" />
+        <img src="img/icons/icon-star-fill.svg" alt="" />
+        <img src="img/icons/icon-star-empty.svg" alt="" />
+        <p class="opinions-avis">(50 avis)</p>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-content_client">
+          <p>Madame Martin, il y a 2 jours</p>
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-empty.svg" alt="" />
+          <p class="client-text">
+            En tant que passionnée de plantes d'intérieur, je ne peux pas assez recommander la
+            magnifique plante que j'ai achetée sur ce site. Elle a vraiment transformé mon espace de
+            vie de manière remarquable.
+          </p>
+        </div>
+        <div class="reviews-content_client">
+          <p>Madame Martin, il y a 2 jours</p>
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-empty.svg" alt="" />
+          <p class="client-text">
+            En tant que passionnée de plantes d'intérieur, je ne peux pas assez recommander la
+            magnifique plante que j'ai achetée sur ce site. Elle a vraiment transformé mon espace de
+            vie de manière remarquable.
+          </p>
+        </div>
+        <div class="reviews-content_client">
+          <p>Madame Martin, il y a 2 jours</p>
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <img src="img/icons/icon-star-fill.svg" alt="" />
+          <p class="client-text">
+            En tant que passionnée de plantes d'intérieur, je ne peux pas assez recommander la
+            magnifique plante que j'ai achetée sur ce site. Elle a vraiment transformé mon espace de
+            vie de manière remarquable.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!---------------------- SUGGEST ---------------------->
+    <div class="suggest">
+      <h2 class="suggest-container_title">Vous pourriez aussi aimer</h2>
+      <div id="suggest-plants"></div>
+    </div>
+
+    <!---------------------- NEWSLETTER ---------------------->
+    <div class="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
+        <p class="newsletter-container_subtitle">
+          Venez découvrir les plantes dans notre magasins !
+        </p>
+        <div class="newsletter-container_mail">
+          <label>Votre email</label>
+          <div class="input_group">
+            <input type="email" placeholder="Entrez votre email" class="input" />
+            <button class="newsletter-btn btn">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- FOOTER ---------------------->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="img/logo/ori-and-co-logo.svg" alt="Logo Ori and co" />
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Plan du site</h3>
+          <a href="#" class="sitemap-link">Accueil</a>
+          <a href="#" class="sitemap-link">À propos</a>
+          <a href="search.html" class="sitemap-link">Notre catalogue</a>
+          <a href="#" class="sitemap-link">Contact</a>
+        </div>
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Besoin d'aide</h3>
+          <a href="#" class="sitemap-link">Livraison</a>
+          <a href="#" class="sitemap-link">Paiement</a>
+          <a href="#" class="sitemap-link">Suivi de commande</a>
+          <a href="#" class="sitemap-link">Retours</a>
+          <a href="#" class="sitemap-link">FAQ</a>
+        </div>
+        <div class="footer-content_contact">
+          <h3 class="contact-title">Contact</h3>
+          <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
+          <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
+          <p class="contact-bold">Adresse</p>
+          <p class="contact-address contact-space">
+            Tour de Barad-dûr, Région Mordor, Terre du Milieu
+          </p>
+        </div>
+        <div class="footer-content_socials">
+          <h3 class="socials-title">Suivez nous</h3>
+          <div class="socials-content">
+            <a
+              ><img
+                src="img/icons/icon-instagram.svg"
+                alt="Icone Instagram"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-facebook..svg"
+                alt="Icone Facebook"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-pinterest.svg"
+                alt="Icone Pinterest"
+                class="socials-content_link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legals">
+        <a href="#" class="footer-legals_link">Mentions Légales</a>
+        <img src="img/icons/icon-dot.svg" class="footer-legals_dot" />
+        <a href="#" class="footer-legals_link">Politique de confidentialité</a>
+      </div>
+    </footer>
+
+    <script src="./js/product.js" type="text/javascript"></script>
+  </body>
+</html>

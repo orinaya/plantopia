@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./theme/style.css" />
+    <link rel="icon" href="img/logo/ori-and-co-logo-white.svg" />
+    <title>Ori anc co</title>
+  </head>
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="#"
+            ><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt=""
+          /></a>
+          <div class="header-links">
+            <a href="index.html" class="header-link">Accueil</a>
+            <a href="#" class="header-link">A propos</a>
+            <a href="search.html" class="header-link">Notre catalogue</a>
+            <a href="#" class="header-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-searchbar">
+            <input type="text" id="searchbar" placeholder="Rechercher..." />
+            <img class="searchbar-icon" src="img/icons/icon-search.svg" />
+          </div>
+          <div class="header-icon">
+            <a href="cart.html"><img class="bag" src="img/icons/icon-bag-2.svg" alt="" /></a>
+            <a href="#" class="user-link"
+              ><img class="user" src="img/icons/icon-user.svg" alt=""
+            /></a>
+
+            <div class="hamburger-menu">
+              <input id="menu_toggle" type="checkbox" />
+              <label class="menu_btn" for="menu_toggle">
+                <span></span>
+              </label>
+
+              <ul class="menu_box">
+                <li><a class="menu_item" href="index.html">Accueil</a></li>
+                <li><a class="menu_item" href="#">À propos</a></li>
+                <li><a class="menu_item" href="#">Notre catalogue</a></li>
+                <li><a class="menu_item" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------- BREADCRUMB ---------------------->
+    <div class="breadcrumb">
+      <a href="index.html" class="breadcrumb_previous">Accueil</a>
+      <p class="breadcrumb_separator">/</p>
+      <p class="breadcrumb_current">Résultats pour 'Plantes'</p>
+    </div>
+
+    <!---------------------- TITLE ---------------------->
+    <h1 class="h1-title">Résultats pour 'Plantes'</h1>
+    <p id="resultCount">Il y a <span id="resultNumber"></span> produits</p>
+    <div class="filters">
+      <select id="sort">
+        <option value="default">Trier par</option>
+        <option value="nom_asc">Nom ASC</option>
+        <option value="nom_desc">Nom DESC</option>
+        <option value="prix_asc">Prix ASC</option>
+        <option value="prix_desc">Prix DESC</option>
+      </select>
+      <div class="filters_right">
+        <select id="categoryFilter" onchange="filterByCategory()">
+          <option value="all">Type de produit</option>
+          <option value="Fleur">Fleur</option>
+          <option value="Succulente">Succulente</option>
+          <option value="Plantes d'intérieur">Plantes d'intérieur</option>
+        </select>
+
+        <select id="filter">
+          <option value="default">Longueur (cm)</option>
+          <option value="nom_asc">- 10 cm</option>
+          <option value="nom_desc">10 - 30cm</option>
+          <option value="prix_asc">30 - 60cm</option>
+          <option value="prix_desc">+ 60 cm</option>
+        </select>
+        <select id="filter">
+          <option value="default">Prix</option>
+          <option value="nom_asc">- 20€</option>
+          <option value="nom_desc">20€ - 40€</option>
+          <option value="prix_asc">40€ - 60€</option>
+          <option value="prix_desc">+ 60€</option>
+        </select>
+        <button class="btn primary">Tous les filtres<img src="img/icons/icon-params.svg" /></button>
+      </div>
+    </div>
+
+    <!---------------------- LIST ---------------------->
+    <div id="list-plants"></div>
+    <!-- <a href="product.html" id="list-plants"></a> -->
+    <button class="list-button btn">Voir plus<img src="img/icons/icon-plus.svg" alt="" /></button>
+
+    <!---------------------- NEWSLETTER ---------------------->
+    <div class="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
+        <p class="newsletter-container_subtitle">
+          Venez découvrir les plantes dans notre magasins !
+        </p>
+        <div class="newsletter-container_mail">
+          <label>Votre email</label>
+          <div class="input_group">
+            <input type="email" placeholder="Entrez votre email" class="input" />
+            <button class="newsletter-btn btn">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- FOOTER ---------------------->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="img/logo/ori-and-co-logo.svg" alt="Logo Ori and co" />
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Plan du site</h3>
+          <a href="#" class="sitemap-link">Accueil</a>
+          <a href="#" class="sitemap-link">À propos</a>
+          <a href="search.html" class="sitemap-link">Notre catalogue</a>
+          <a href="#" class="sitemap-link">Contact</a>
+        </div>
+        <div class="footer-content_sitemap">
+          <h3 class="sitemap-title">Besoin d'aide</h3>
+          <a href="#" class="sitemap-link">Livraison</a>
+          <a href="#" class="sitemap-link">Paiement</a>
+          <a href="#" class="sitemap-link">Suivi de commande</a>
+          <a href="#" class="sitemap-link">Retours</a>
+          <a href="#" class="sitemap-link">FAQ</a>
+        </div>
+        <div class="footer-content_contact">
+          <h3 class="contact-title">Contact</h3>
+          <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
+          <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
+          <p class="contact-bold">Adresse</p>
+          <p class="contact-address contact-space">
+            Tour de Barad-dûr, Région Mordor, Terre du Milieu
+          </p>
+        </div>
+        <div class="footer-content_socials">
+          <h3 class="socials-title">Suivez nous</h3>
+          <div class="socials-content">
+            <a
+              ><img
+                src="img/icons/icon-instagram.svg"
+                alt="Icone Instagram"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-facebook..svg"
+                alt="Icone Facebook"
+                class="socials-content_link"
+            /></a>
+            <a
+              ><img
+                src="img/icons/icon-pinterest.svg"
+                alt="Icone Pinterest"
+                class="socials-content_link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legals">
+        <a href="#" class="footer-legals_link">Mentions Légales</a>
+        <img src="img/icons/icon-dot.svg" class="footer-legals_dot" />
+        <a href="#" class="footer-legals_link">Politique de confidentialité</a>
+      </div>
+    </footer>
+
+    <script src="./js/search-card.js" type="text/javascript"></script>
+  </body>
+</html>
