@@ -8,30 +8,30 @@
     <title>Ori anc co</title>
   </head>
   <body>
-    <!---------------------- NAVBAR ---------------------->
+    <!-- NAVBAR -->
     <nav class="header">
       <div class="header-content">
         <div class="header-left">
           <a href="#"
-            ><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt=""
+            ><img class="header-logo" src="img/logo/ori-and-co-logo-white.svg" alt="Logo Ori and co"
           /></a>
           <div class="header-links">
             <a href="index.html" class="header-link">Accueil</a>
             <a href="#" class="header-link">A propos</a>
             <a href="search.html" class="header-link">Notre catalogue</a>
-            <a href="#" class="header-link">Contact</a>
+            <a href="contact.html" class="header-link">Contact</a>
           </div>
         </div>
 
         <div class="header-right">
           <div class="header-searchbar">
             <input type="text" id="searchbar" placeholder="Rechercher..." />
-            <img class="searchbar-icon" src="img/icons/icon-search.svg" />
+            <img class="searchbar-icon" src="img/icons/icon-search.svg" alt="icone loupe" />
           </div>
           <div class="header-icon">
-            <a href="cart.html"><img class="bag" src="img/icons/icon-bag-2.svg" alt="" /></a>
+            <a href="cart.html"><img class="bag" src="img/icons/icon-bag-2.svg" alt="icone sac" /></a>
             <a href="#" class="user-link"
-              ><img class="user" src="img/icons/icon-user.svg" alt=""
+              ><img class="user" src="img/icons/icon-user.svg" alt="icone utilisateur"
             /></a>
 
             <div class="hamburger-menu">
@@ -43,8 +43,8 @@
               <ul class="menu_box">
                 <li><a class="menu_item" href="index.html">Accueil</a></li>
                 <li><a class="menu_item" href="#">À propos</a></li>
-                <li><a class="menu_item" href="#">Notre catalogue</a></li>
-                <li><a class="menu_item" href="#">Contact</a></li>
+                <li><a class="menu_item" href="search.html">Notre catalogue</a></li>
+                <li><a class="menu_item" href="contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -52,33 +52,26 @@
       </div>
     </nav>
 
+    <!---------------------- ARROW ---------------------->
+    <a href="#"><img class="arrow-up" src="./img/icons/icon-arrow-up.png" /></a>
+
     <!---------------------- HERO ---------------------->
     <section id="hero">
       <div class="hero-content">
         <h1 class="hero-content_title">Créez votre univers</h1>
         <p class="hero-content_text">
-          Décorez votre habitation avec nos plantes et fleurs et suivez tous nos conseils pour les
-          garder en bonne santé !
+          Décorez votre habitation avec nos plantes et fleurs et suivez tous nos conseils pour les garder en
+          bonne santé !
         </p>
         <a href="search.html" class="hero-content_button btn">
-          Découvrir nos plantes<img
-            src="img/icons/icon-arrow-right.svg"
-            alt="icone flèche vers la droite"
+          Découvrir nos plantes<img src="img/icons/icon-arrow-right.svg" alt="icone flèche vers la droite"
         /></a>
       </div>
       <div class="hero-image">
         <img src="img/plants/monstera.png" alt="monstera en pot" class="hero-image_principal" />
         <img src="img/hero-image-2.png" alt="intérieur rempli de plantes" class="hero-image_top" />
-        <img
-          src="img/hero-image-3.png"
-          alt="intérieur rempli de plantes"
-          class="hero-image_bottom"
-        />
-        <img
-          src="img/graphics/hero-ellipse.png"
-          alt="cercles roses pâles"
-          class="hero-image_background"
-        />
+        <img src="img/hero-image-3.png" alt="intérieur rempli de plantes" class="hero-image_bottom" />
+        <img src="img/graphics/hero-ellipse.png" alt="cercles roses pâles" class="hero-image_background" />
       </div>
     </section>
 
@@ -90,11 +83,7 @@
       <div class="selection-container">
         <div class="selection-content">
           <div class="selection-bigcard">
-            <img
-              src="img/icons/icon-heart.svg"
-              alt="icone coeur plein"
-              class="selection-bigcard_icon"
-            />
+            <img src="img/icons/icon-heart-line.svg" alt="icone coeur ligne" class="selection-bigcard_icon" />
             <img src="img/plants/lys.png" alt="lys blanches vase" class="selection-bigcard_img" />
             <div class="selection-infos">
               <p class="selection-infos_title">Lys</p>
@@ -117,9 +106,7 @@
         </div>
       </div>
       <a href="search.html" class="selection_button btn primary">
-        Voir notre sélection<img
-          src="img/icons/icon-arrow-right.svg"
-          alt="icone flèche vers la droite"
+        Voir notre sélection<img src="img/icons/icon-arrow-right.svg" alt="icone flèche vers la droite"
       /></a>
     </section>
 
@@ -172,47 +159,41 @@
       </div>
 
       <a href="search.html" class="category_button btn primary">
-        Voir les catégories<img
-          src="img/icons/icon-arrow-right.svg"
-          alt="icone flèche vers la droite"
+        Voir les catégories<img src="img/icons/icon-arrow-right.svg" alt="icone flèche vers la droite"
       /></a>
     </section>
 
     <!---------------------- ADVICES ---------------------->
 
-    <div class="advices">
+    <section class="advices">
       <h2 class="advices_title">Nos idées et conseils</h2>
-      <p class="advices_subtitle subtitle">
-        Cherchez l'inspiration et prenez soin de vos plantes !
-      </p>
+      <p class="advices_subtitle subtitle">Cherchez l'inspiration et prenez soin de vos plantes !</p>
       <div class="advices-cards">
         <div class="advices-cards_content">
-          <img class="content-photo" src="img/advices-photo.png" alt="" />
+          <img class="content-photo" src="img/advices-photo-1.png" alt="intérieur avec des plantes" />
           <p class="content-text">Quel arrosage pour vos plantes ?</p>
           <p class="content-category advices-tag">Conseils</p>
         </div>
         <div class="advices-cards_content">
-          <img class="content-photo" src="img/advices-photo.png" alt="" />
+          <img class="content-photo" src="img/advices-photo-2.jpeg" alt="intérieur avec des plantes" />
           <p class="content-text">Quel arrosage pour vos plantes ?</p>
           <p class="content-category ideas-tag">Idées</p>
         </div>
         <div class="advices-cards_content">
-          <img class="content-photo" src="img/advices-photo.png" alt="" />
+          <img class="content-photo" src="img/advices-photo-3.jpeg" alt="intérieur avec des plantes" />
           <p class="content-text">Quel arrosage pour vos plantes ?</p>
           <p class="content-category advices-tag">Conseils</p>
         </div>
         <div class="advices-cards_content">
-          <img class="content-photo" src="img/advices-photo.png" alt="" />
+          <img class="content-photo" src="img/advices-photo-4.jpeg" alt="intérieur avec des plantes" />
           <p class="content-text">Quel arrosage pour vos plantes ?</p>
           <p class="content-category ideas-tag">Idées</p>
         </div>
       </div>
       <a href="search.html" class="advices_button btn primary">
-        Découvrir nos articles<img
-          src="img/icons/icon-arrow-right.svg"
-          alt="icone flèche vers la droite"
+        Découvrir nos articles<img src="img/icons/icon-arrow-right.svg" alt="icone flèche vers la droite"
       /></a>
-    </div>
+    </section>
 
     <!---------------------- CONTACT ---------------------->
     <section id="contact">
@@ -227,6 +208,7 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          class="content-frame"
         ></iframe>
         <div class="contact-content_informations">
           <div class="informations-group">
@@ -250,11 +232,7 @@
     <section class="informations">
       <div class="informations-content">
         <div class="informations-content_group">
-          <img
-            class="group-icon"
-            src="img/icons/icon-credit-card.svg"
-            alt="icone carte de crédit"
-          />
+          <img class="group-icon" src="img/icons/icon-credit-card.svg" alt="icone carte de crédit" />
           <p class="group-text">Paiement sécurisé en 3 ou 4 fois</p>
         </div>
         <div class="informations-content_group">
@@ -272,9 +250,7 @@
     <section class="newsletter">
       <div class="newsletter-container">
         <h2 class="newsletter-container_title white">Abonnez vous à notre newsletter</h2>
-        <p class="newsletter-container_subtitle">
-          Venez découvrir les plantes dans notre magasins !
-        </p>
+        <p class="newsletter-container_subtitle">Venez découvrir les plantes dans notre magasins !</p>
         <div class="newsletter-container_mail">
           <label>Votre email</label>
           <div class="input_group">
@@ -310,30 +286,19 @@
           <p class="contact-space"><b>Tél :</b> 07 05 65 42 20</p>
           <p class="contact-space"><b>Email :</b> contact@oriandco.com</p>
           <p class="contact-bold">Adresse</p>
-          <p class="contact-address contact-space">
-            Tour de Barad-dûr, Région Mordor, Terre du Milieu
-          </p>
+          <p class="contact-address contact-space">Tour de Barad-dûr, Région Mordor, Terre du Milieu</p>
         </div>
         <div class="footer-content_socials">
           <h3 class="socials-title">Suivez nous</h3>
           <div class="socials-content">
             <a
-              ><img
-                src="img/icons/icon-instagram.svg"
-                alt="Icone Instagram"
-                class="socials-content_link"
+              ><img src="img/icons/icon-instagram.svg" alt="Icone Instagram" class="socials-content_link"
             /></a>
             <a
-              ><img
-                src="img/icons/icon-facebook..svg"
-                alt="Icone Facebook"
-                class="socials-content_link"
+              ><img src="img/icons/icon-facebook..svg" alt="Icone Facebook" class="socials-content_link"
             /></a>
             <a
-              ><img
-                src="img/icons/icon-pinterest.svg"
-                alt="Icone Pinterest"
-                class="socials-content_link"
+              ><img src="img/icons/icon-pinterest.svg" alt="Icone Pinterest" class="socials-content_link"
             /></a>
           </div>
         </div>

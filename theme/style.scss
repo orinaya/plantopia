@@ -1,3 +1,4 @@
+@use "./home";
 @font-face {
   font-family: Hagrid;
   src: url("../fonts/Hagrid-Text-Extrabold-trial.ttf") format("truetype");
@@ -167,6 +168,10 @@ $green-hover-ghost-fg: hsl(119, 36%, 30%);
 $green-hover-outline-fg: hsl(119, 35%, 40%);
 
 // General
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: hsl(36, 24%, 96%);
   width: 100%;
@@ -181,6 +186,7 @@ p,
 ul,
 li {
   margin: 0;
+  list-style-type: none;
 }
 
 a {
@@ -322,6 +328,18 @@ h4 {
   }
 }
 
+//Arrow back to top---------------------------------------------------------
+.arrow-up {
+  height: 48px;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  z-index: 1;
+
+  @include bpf($max: $m) {
+    display: none;
+  }
+}
 // Header---------------------------------------------------------
 
 .header {
@@ -421,6 +439,10 @@ h4 {
         @include alignCenter;
         gap: $space-l;
 
+        @include bpf($max: $m) {
+          gap: $space-xs;
+        }
+
         .bag,
         .user {
           text-decoration: none;
@@ -457,15 +479,15 @@ h4 {
 /* Burger */
 
 .menu_box {
-  display: block;
   position: fixed;
   visibility: hidden;
-  top: 60px;
-  right: 31px;
+  top: 0;
+  right: 0;
+  height: 100%;
   list-style: none;
   width: 100%;
   background-color: hsl(36, 24%, 96%);
-  padding-top: 46px;
+  padding-top: 120px;
   padding-bottom: 100px;
 }
 
@@ -475,10 +497,22 @@ h4 {
   font-weight: 600px;
   color: #000;
   text-decoration: none;
+  text-align: center;
+}
+
+.menu_item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 4px $green-default-primary-bg;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  border-radius: 5rem;
 }
 
 .menu_item:hover {
-  background-color: #000;
+  color: #fff;
+  font-weight: $weight-600;
+  background-color: $green-default-primary-bg;
 }
 
 #menu_toggle:checked ~ .menu_box {
@@ -489,13 +523,14 @@ h4 {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 17px;
-  right: 116px;
+  top: 0px;
+  right: 0px;
   width: 26px;
   height: 26px;
   cursor: pointer;
   z-index: 1;
   transition: transform(1.4s);
+  position: absolute;
 
   & > span,
   & > span::before,
@@ -522,6 +557,7 @@ h4 {
   opacity: 0;
   height: 20px;
   width: 28px;
+  position: relative;
 }
 
 // Footer---------------------------------------------------------
@@ -1199,6 +1235,9 @@ h4 {
     @include alignCenter;
     justify-content: space-between;
     gap: 40px;
+    @include bpf($max: $m) {
+      overflow: scroll;
+    }
   }
 
   .advices-cards_content {
@@ -1207,6 +1246,7 @@ h4 {
     position: relative;
     transition: transform 1s;
     cursor: pointer;
+    flex-wrap: wrap;
 
     &:hover {
       transform: scale(1.06);
@@ -1215,7 +1255,7 @@ h4 {
 
   .content-photo {
     height: 300px;
-    width: 100%;
+    width: 290px;
     border-radius: 0 4px 0 4px;
     object-fit: cover;
   }
@@ -1226,6 +1266,10 @@ h4 {
     text-decoration: none;
     padding: $space-l;
     background-color: white;
+
+    @include bpf($max: $m) {
+      padding: 32px 10px;
+    }
   }
 
   .content-category {
@@ -1237,6 +1281,10 @@ h4 {
     bottom: 98px;
     position: absolute;
     left: $space-l;
+
+    @include bpf($max: $m) {
+      bottom: 74px;
+    }
   }
 
   .advices-tag {
@@ -1302,7 +1350,7 @@ h4 {
     }
   }
 
-  .frame {
+  .content-frame {
     width: 50%;
     height: 400px;
 
@@ -1477,14 +1525,31 @@ h4 {
   &_right {
     display: flex;
     gap: 40px;
+
+    @include bpf($max: $s) {
+      font-size: 12px;
+    }
   }
   #sort,
-  #filter,
+  .filter,
   #categoryFilter {
     padding: 8px 20px;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     background-color: white;
+  }
+
+  .filter {
+    @include bpf($max: $m) {
+      display: none;
+    }
+  }
+
+  .btn-filter {
+    @include bpf($max: $s) {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
   }
 }
 
@@ -1495,7 +1560,11 @@ h4 {
   justify-content: flex-start;
   margin-bottom: $space-xxl;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 34px;
+
+  @include bpf($min: $m, $max: $xl) {
+    gap: 49px;
+  }
 
   @include bpf($max: $s) {
     gap: 10px;
@@ -1744,6 +1813,7 @@ h4 {
         display: flex;
         align-items: center;
         gap: 20px;
+        flex-wrap: wrap;
 
         &_link {
           color: #000000;
@@ -2108,6 +2178,96 @@ h4 {
       margin-top: $space-l;
     }
     .payment-icon-first-line {
+    }
+  }
+}
+
+//-----------------------------CART PAGE----------------------------//
+.contact-form-subtitle {
+  @include container;
+  font-weight: $weight-600;
+  margin-bottom: 40px;
+}
+.contact-form {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+
+  @include bpf($max: $m) {
+    flex-direction: column-reverse;
+  }
+
+  .form {
+    width: 45%;
+
+    @include bpf($max: $m) {
+      width: 100%;
+    }
+
+    .form-name {
+      display: flex;
+      gap: 40px;
+    }
+
+    .form-content {
+      @include column;
+      background-color: #214521;
+      border-radius: 0 $ext 0 $ext;
+      color: #fff;
+      padding: 60px 40px;
+      gap: $space-l;
+      @include bpf($max: $m) {
+        width: 100%;
+      }
+
+      &_line {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+        width: 511px;
+
+        @include bpf($max: $m) {
+          width: 100%;
+        }
+        .line-label {
+        }
+
+        .line-input {
+          padding: 8px 20px;
+          border-radius: 4px;
+          border: 1px solid #e0e0e0;
+          background-color: white;
+        }
+
+        .line-textarea {
+          padding: 8px 20px;
+          border-radius: 4px;
+          border: 1px solid #e0e0e0;
+          background-color: white;
+          height: 200px;
+        }
+      }
+
+      &_button {
+        margin: 0 auto;
+      }
+    }
+  }
+  .contact-left {
+    height: max-content;
+    width: 52%;
+
+    @include bpf($max: $m) {
+      width: 100%;
+    }
+
+    .left-image {
+      width: 100%;
+      @include bpf($max: $m) {
+        width: 741px;
+        height: 400px;
+        object-fit: cover;
+      }
     }
   }
 }

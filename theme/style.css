@@ -8,6 +8,10 @@
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(36, 24%, 96%);
   width: 100%;
@@ -22,6 +26,7 @@ p,
 ul,
 li {
   margin: 0;
+  list-style-type: none;
 }
 
 a {
@@ -176,6 +181,19 @@ h4 {
   color: hsl(119, 36%, 34%);
 }
 
+.arrow-up {
+  height: 48px;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  z-index: 1;
+}
+@media only screen and (max-width: 980px) {
+  .arrow-up {
+    display: none;
+  }
+}
+
 .header {
   height: 60px;
   background-color: hsl(36, 24%, 96%);
@@ -292,6 +310,11 @@ h4 {
   align-items: center;
   gap: 32px;
 }
+@media only screen and (max-width: 980px) {
+  .header .header-content .header-right .header-icon {
+    gap: 8px;
+  }
+}
 .header .header-content .header-right .header-icon .bag,
 .header .header-content .header-right .header-icon .user {
   text-decoration: none;
@@ -322,15 +345,15 @@ h4 {
 
 /* Burger */
 .menu_box {
-  display: block;
   position: fixed;
   visibility: hidden;
-  top: 60px;
-  right: 31px;
+  top: 0;
+  right: 0;
+  height: 100%;
   list-style: none;
   width: 100%;
   background-color: hsl(36, 24%, 96%);
-  padding-top: 46px;
+  padding-top: 120px;
   padding-bottom: 100px;
 }
 
@@ -340,10 +363,22 @@ h4 {
   font-weight: 600px;
   color: #000;
   text-decoration: none;
+  text-align: center;
+}
+
+.menu_item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 4px hsl(119, 36%, 34%);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  border-radius: 5rem;
 }
 
 .menu_item:hover {
-  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  background-color: hsl(119, 36%, 34%);
 }
 
 #menu_toggle:checked ~ .menu_box {
@@ -354,13 +389,14 @@ h4 {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 17px;
-  right: 116px;
+  top: 0px;
+  right: 0px;
   width: 26px;
   height: 26px;
   cursor: pointer;
   z-index: 1;
   transition: transform(1.4s);
+  position: absolute;
 }
 .menu_btn > span, .menu_btn > span::before, .menu_btn > span::after {
   display: block;
@@ -383,6 +419,7 @@ h4 {
   opacity: 0;
   height: 20px;
   width: 28px;
+  position: relative;
 }
 
 .footer {
@@ -1137,6 +1174,11 @@ h4 {
   justify-content: space-between;
   gap: 40px;
 }
+@media only screen and (max-width: 980px) {
+  .advices .advices-cards {
+    overflow: scroll;
+  }
+}
 .advices .advices-cards_content {
   display: flex;
   flex-direction: column;
@@ -1144,13 +1186,14 @@ h4 {
   position: relative;
   transition: transform 1s;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 .advices .advices-cards_content:hover {
   transform: scale(1.06);
 }
 .advices .content-photo {
   height: 300px;
-  width: 100%;
+  width: 290px;
   border-radius: 0 4px 0 4px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1162,6 +1205,11 @@ h4 {
   padding: 32px;
   background-color: white;
 }
+@media only screen and (max-width: 980px) {
+  .advices .content-text {
+    padding: 32px 10px;
+  }
+}
 .advices .content-category {
   padding: 2px 24px;
   color: #fff;
@@ -1172,6 +1220,11 @@ h4 {
   bottom: 98px;
   position: absolute;
   left: 32px;
+}
+@media only screen and (max-width: 980px) {
+  .advices .content-category {
+    bottom: 74px;
+  }
 }
 .advices .advices-tag {
   background-color: #214521;
@@ -1252,12 +1305,12 @@ h4 {
     gap: 40px;
   }
 }
-#contact .frame {
+#contact .content-frame {
   width: 50%;
   height: 400px;
 }
 @media only screen and (max-width: 760px) {
-  #contact .frame {
+  #contact .content-frame {
     width: 100%;
     height: 300px;
   }
@@ -1481,13 +1534,29 @@ h4 {
   display: flex;
   gap: 40px;
 }
+@media only screen and (max-width: 760px) {
+  .filters_right {
+    font-size: 12px;
+  }
+}
 .filters #sort,
-.filters #filter,
+.filters .filter,
 .filters #categoryFilter {
   padding: 8px 20px;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
   background-color: white;
+}
+@media only screen and (max-width: 980px) {
+  .filters .filter {
+    display: none;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .filters .btn-filter {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
 }
 
 #list-plants {
@@ -1501,7 +1570,7 @@ h4 {
   justify-content: flex-start;
   margin-bottom: 48px;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 34px;
 }
 @media only screen and (max-width: 760px) {
   #list-plants {
@@ -1516,6 +1585,11 @@ h4 {
 @media only screen and (min-width: 980px) and (max-width: 1440px) {
   #list-plants {
     max-width: 990px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1440px) {
+  #list-plants {
+    gap: 49px;
   }
 }
 @media only screen and (max-width: 760px) {
@@ -1810,6 +1884,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 #product .product-content_title .informations-product_link {
   color: #000000;
@@ -2275,4 +2350,130 @@ h4 {
   margin: 24px;
   gap: 24px;
   margin-top: 32px;
+}
+.contact-form-subtitle {
+  max-width: 1280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 760px) {
+  .contact-form-subtitle {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 980px) {
+  .contact-form-subtitle {
+    max-width: 660px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1440px) {
+  .contact-form-subtitle {
+    max-width: 990px;
+  }
+}
+
+.contact-form {
+  max-width: 1280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 760px) {
+  .contact-form {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 980px) {
+  .contact-form {
+    max-width: 660px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1440px) {
+  .contact-form {
+    max-width: 990px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .contact-form {
+    flex-direction: column-reverse;
+  }
+}
+.contact-form .form {
+  width: 45%;
+}
+@media only screen and (max-width: 980px) {
+  .contact-form .form {
+    width: 100%;
+  }
+}
+.contact-form .form .form-name {
+  display: flex;
+  gap: 40px;
+}
+.contact-form .form .form-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #214521;
+  border-radius: 0 4px 0 4px;
+  color: #fff;
+  padding: 60px 40px;
+  gap: 32px;
+}
+@media only screen and (max-width: 980px) {
+  .contact-form .form .form-content {
+    width: 100%;
+  }
+}
+.contact-form .form .form-content_line {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 511px;
+}
+@media only screen and (max-width: 980px) {
+  .contact-form .form .form-content_line {
+    width: 100%;
+  }
+}
+.contact-form .form .form-content_line .line-input {
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+}
+.contact-form .form .form-content_line .line-textarea {
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  height: 200px;
+}
+.contact-form .form .form-content_button {
+  margin: 0 auto;
+}
+.contact-form .contact-left {
+  height: -moz-max-content;
+  height: max-content;
+  width: 52%;
+}
+@media only screen and (max-width: 980px) {
+  .contact-form .contact-left {
+    width: 100%;
+  }
+}
+.contact-form .contact-left .left-image {
+  width: 100%;
+}
+@media only screen and (max-width: 980px) {
+  .contact-form .contact-left .left-image {
+    width: 741px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=style.css.map */
